@@ -8,6 +8,22 @@
 
     <title>Dani Ruiz | Asesor de Viajes</title>
 
+    <meta name="description" content="Planifico vacaciones a medida para que tu único trabajo sea disfrutar. Atención personalizada, asesoramiento y acompañamiento durante todo el viaje.">
+    <meta name="keywords" content="asesor de viajes, viajes personalizados, vacaciones, organizar viajes, Dani Ruiz">
+    <meta name="author" content="Dani Ruiz">
+    <meta http-equiv="content-language" content="es">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#111111">
+    <meta property="og:title" content="Dani Ruiz | Asesor de viajes">
+    <meta property="og:description" content="Planifico vacaciones a medida para que tú solo tengas que disfrutar.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hazlo-dev.github.io/dani-web/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dani Ruiz | Asesor de viajes">
+    <meta name="twitter:description" content="Planifico vacaciones a medida para que tú solo tengas que disfrutar.">
+    <link rel="canonical" href="https://hazlo-dev.github.io/dani-web/">
+    <link rel="icon" href="icons/icon-192.png">
+
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,9 +33,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#111111">
+    <link rel="icon" href="icons/icon-192.png">
+
 </head>
 
-<body>
+<hero>
 
     <main class="container hidden">
 
@@ -48,19 +68,32 @@
 
         <section class="buttons">
 
-       <a href="#" class="button primary hidden">
+       <a href="https://wa.me/34622180624?text=Hola%20Dani,%20he%20visto%20tu%20web%20y%20me%20gustaría%20que%20me%20ayudaras%20a%20organizar%20un%20viaje."
+        target="_blank"
+        rel="noopener" 
+        class="button primary hidden">
         <i class="fa-brands fa-whatsapp"></i>
-        Hablar por WhatsApp
+        Contactar por WhatsApp
        </a>
 
-        <a href="#" class="button secondary hidden">
-        <i class="fa-solid fa-phone"></i>
-        Reservar una llamada
-        </a>
+        <a href="https://calendly.com/danymr-1221/llamada-para-organizar-tu-viaje"
+        target="_blank"
+        rel="noopener"
+        class="button secondary hidden">
 
-        <a href="#" class="button secondary hidden">
+        <i class="fa-regular fa-calendar"></i>
+        Reservar llamada
+
+</a>
+
+       <a href="https://www.evotravelagent.com/danimr"
+        target="_blank"
+        rel="noopener"
+        class="button secondary hidden">
+
         <i class="fa-solid fa-earth-europe"></i>
         Planifica tu viaje.
+
         </a>
 
 </section>
@@ -68,39 +101,163 @@
 
         <section class="benefits hidden">
 
-            <h2>¿Por qué reservar conmigo?</h2>
+    <h2>Viajar debería ser así</h2>
 
-            <ul>
+    <div class="benefits-grid">
 
-                <li>Atención totalmente personalizada.</li>
+        <div class="benefit-card hidden">
+            <i class="fa-regular fa-clock"></i>
 
-                <li>Busqueda de las mejores ofertas.</li>
+            <h3>Ahorra tiempo</h3>
 
-                <li>Asesoramiento antes, durante y después del viaje.</li>
+            <p>
+                Olvídate de comparar cientos de opciones.<br>
+                Yo me encargo de organizar tu viaje y encontrar la mejor opción para ti.
+            </p>
+        </div>
 
-                <li>Viajes adaptados a tus necesidades.</li>
+        <div class="benefit-card hidden">
+            <i class="fa-regular fa-user"></i>
 
-            </ul>
+            <h3>Atención personalizada</h3>
 
-        </section>
+            <p>
+                Cada viaje es diferente, y cada persona también.<br>
+                Diseño cada propuesta según tus gustos, presupuesto y forma de viajar.
+            </p>
+        </div>
 
+        <div class="benefit-card hidden">
+            <i class="fa-solid fa-shield-halved"></i>
 
-        <section class="reviews hidden">
+            <h3>Tranquilidad</h3>
 
-            <h2>Opiniones</h2>
+            <p>
+                No estarás solo durante el proceso.<br>
+                Estaré disponible para ayudarte antes, durante y después del viaje.
+            </p>
+        </div>
 
-            <p class="stars">★★★★★</p>
+    </div>
 
-            <a href="#">
-                Ver reseñas
-            </a>
+</section>
 
-        </section>
+<section class="review-request hidden disabled-section">
 
-    </main>
+    <h2>¿Qué tal fue tu experiencia?</h2>
 
-    <script src="script.js"></script>
+    <p>
+        Si has confiado en mí para organizar tu viaje,<br>
+        me ayudaría muchísimo que compartieras tu opinión para ayudar a futuros viajeros.
+    </p>
 
+    <a href="AQUI_IRA_EL_ENLACE_DE_GOOGLE" class="button secondary">
+        <i class="fa-brands fa-google"></i>
+        Compartir mi experiencia.
+    </a>
+
+</section>
+
+<section class="reviews hidden disabled-section" style="display:none;">
+
+    <h2>La confianza se gana con experiencias reales.</h2>
+
+    <div class="stars">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+    </div>
+
+    <a href="AQUI_IRA_EL_ENLACE_DE_GOOGLE" class="button secondary">
+        <i class="fa-brands fa-google"></i>
+        Ver opiniones en Google
+    </a>
+
+</section>
+
+<section class="process hidden">
+
+    <h2>Así organizaremos tu viaje.</h2>
+
+    <p class="process-subtitle">
+        Un proceso sencillo para que tú solo tengas que preocuparte de disfrutar.
+    </p>
+
+    <div class="process-timeline">
+
+        <div class="process-step hidden">
+
+            <div class="process-icon">
+                <i class="fa-solid fa-comments"></i>
+            </div>
+
+            <h3>Cuéntame tu idea</h3>
+
+            <p>
+                Hablaremos sobre tu destino, presupuesto, fechas,
+                necesidades y todo lo que buscas en el viaje.
+            </p>
+
+        </div>
+
+        <div class="timeline-line"></div>
+
+        <div class="process-step hidden">
+
+            <div class="process-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <h3>Busco la mejor opción</h3>
+
+            <p>
+                Compararé diferentes alternativas hasta encontrar
+                la propuesta que mejor se adapte a ti.
+            </p>
+
+        </div>
+
+        <div class="timeline-line"></div>
+
+        <div class="process-step hidden">
+
+            <div class="process-icon">
+                <i class="fa-solid fa-plane-departure"></i>
+            </div>
+
+            <h3>Solo queda disfrutar</h3>
+
+            <p>
+                Una vez todo esté listo, solo tendrás que preparar
+                la maleta y disfrutar. Yo seguiré disponible para ayudarte.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer hidden">
+
+    <p class="footer-title">
+        Planifico vacaciones a medida.
+    </p>
+
+    <p class="footer-copy">
+        © 2026 Dani · Asesor de viajes
+    </p>
+
+    <a href="privacidad.html">
+        Política de privacidad
+    </a>
+
+</footer>
+
+</main>
+<script src="script.js"></script>
 </body>
 
 </html>
