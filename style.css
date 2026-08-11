@@ -859,3 +859,26 @@ h1 {
 * {
     -webkit-tap-highlight-color: transparent;
 }
+
+/* ANIMACIÓN SUAVE DE LOS BOTONES PRINCIPALES */
+
+.button {
+    transition:
+        transform .3s cubic-bezier(.22,1,.36,1),
+        box-shadow .3s cubic-bezier(.22,1,.36,1),
+        background .3s ease,
+        border-color .3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.button:active {
+    transform: translateY(-1px) scale(.985);
+}
+
+.button:hover i {
+    transform: rotate(-8deg) scale(1.08);
+}
