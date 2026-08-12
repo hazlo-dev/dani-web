@@ -3,7 +3,7 @@
    ========================================= */
 
 const elements = document.querySelectorAll(
-    ".hidden:not(.benefits):not(.benefits .hidden):not(.process):not(.process .hidden):not(.footer)"
+    ".hidden:not(.benefits):not(.benefits .hidden):not(.process):not(.process .hidden):not(.footer):not(.button-hint)"
 );
 
 const delays = [
@@ -19,6 +19,16 @@ const delays = [
 ];
 
 elements.forEach((element, index) => {
+
+    const buttonHints = document.querySelectorAll(".button-hint.hidden");
+
+buttonHints.forEach((hint, index) => {
+
+    setTimeout(() => {
+        hint.classList.add("show");
+    }, 1100 + (index * 300));
+
+});
 
     if (
         element.classList.contains("process-step") ||
