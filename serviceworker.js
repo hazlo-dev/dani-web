@@ -1,8 +1,9 @@
-const CACHE_NAME = "dani-web-v1";
+const CACHE_NAME = "dani-web-v2";
 
 const FILES_TO_CACHE = [
     "./",
     "./index.html",
+    "./politica-privacidad.html",
     "./style.css",
     "./script.js",
     "./manifest.json",

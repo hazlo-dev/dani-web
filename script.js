@@ -12,7 +12,7 @@ const delays = [
     200,    // Primera frase
     300,    // Segunda frase
     600,    // Dani Ruiz
-    900,    // Asesor de viajes
+    900,    // Agente de viajes independiente
     1100,   // Contactar por WhatsApp
     1400,   // Reservar llamada
     1700    // Planifica tu viaje
