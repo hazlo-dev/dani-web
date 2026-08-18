@@ -1,0 +1,151 @@
+<!-- ============================================================
+     FORMULARIO · SECCIÓN 1 · DATOS DEL CLIENTE
+     ============================================================ -->
+
+<main class="travel-form-page">
+
+    <section class="travel-form-section active" id="step-1">
+
+        <div class="travel-form-header">
+
+            <p class="travel-form-eyebrow">
+                01 · TUS DATOS
+            </p>
+
+            <h1>
+                Empecemos por ti
+            </h1>
+
+            <p class="travel-form-intro">
+                Déjame algunos datos para poder ponerme en contacto contigo
+                y conocer mejor tu idea de viaje.
+            </p>
+
+        </div>
+
+
+        <form class="travel-form">
+
+            <div class="travel-form-field">
+
+                <label for="client-name">
+                    Nombre y apellidos
+                </label>
+
+                <input
+                    type="text"
+                    id="client-name"
+                    name="client-name"
+                    placeholder="Escribe tu nombre y apellidos"
+                    autocomplete="name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="travel-form-field">
+
+                <label for="client-email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="client-email"
+                    name="client-email"
+                    placeholder="tuemail@ejemplo.com"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="travel-form-field">
+
+                <label for="client-phone">
+                    Teléfono
+                </label>
+
+                <input
+                    type="tel"
+                    id="client-phone"
+                    name="client-phone"
+                    placeholder="Tu número de teléfono"
+                    autocomplete="tel"
+                    required
+                >
+
+            </div>
+
+
+            <div class="travel-form-field">
+
+                <label>
+                    ¿Cómo prefieres que te contacte?
+                </label>
+
+                <div class="travel-form-options">
+
+                    <label class="travel-form-option">
+
+                        <input
+                            type="radio"
+                            name="contact-method"
+                            value="whatsapp"
+                            required
+                        >
+
+                        <span>WhatsApp</span>
+
+                    </label>
+
+
+                    <label class="travel-form-option">
+
+                        <input
+                            type="radio"
+                            name="contact-method"
+                            value="llamada"
+                        >
+
+                        <span>Llamada</span>
+
+                    </label>
+
+
+                    <label class="travel-form-option">
+
+                        <input
+                            type="radio"
+                            name="contact-method"
+                            value="email"
+                        >
+
+                        <span>Email</span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="travel-form-navigation">
+
+                <button
+                    type="button"
+                    class="travel-form-next"
+                    data-next="step-2"
+                >
+                    Siguiente
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
