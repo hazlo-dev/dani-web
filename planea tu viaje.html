@@ -148,4 +148,727 @@
 
     </section>
 
+    <!-- ============================================================
+     FORMULARIO · SECCIÓN 2 · TU VIAJE
+     ============================================================ -->
+
+<section class="travel-form-section" id="step-2">
+
+    <div class="travel-form-header">
+
+        <p class="travel-form-eyebrow">
+            02 · TU VIAJE
+        </p>
+
+        <h2>
+            Cuéntame tu idea
+        </h2>
+
+        <p class="travel-form-intro">
+            No hace falta que tengas todo decidido. Cuanto más me cuentes,
+            mejor podré entender qué estás buscando.
+        </p>
+
+    </div>
+
+
+    <form class="travel-form">
+
+        <div class="travel-form-field">
+
+            <label for="travel-destination">
+                ¿A dónde te gustaría viajar?
+            </label>
+
+            <input
+                type="text"
+                id="travel-destination"
+                name="travel-destination"
+                placeholder="Destino o destinos"
+            >
+
+        </div>
+
+
+        <div class="travel-form-row">
+
+            <div class="travel-form-field">
+
+                <label for="travel-start-date">
+                    Fecha aproximada de salida
+                </label>
+
+                <input
+                    type="date"
+                    id="travel-start-date"
+                    name="travel-start-date"
+                >
+
+            </div>
+
+
+            <div class="travel-form-field">
+
+                <label for="travel-end-date">
+                    Fecha aproximada de regreso
+                </label>
+
+                <input
+                    type="date"
+                    id="travel-end-date"
+                    name="travel-end-date"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="travel-form-field">
+
+            <label for="travelers">
+                ¿Cuántas personas viajaríais?
+            </label>
+
+            <input
+                type="number"
+                id="travelers"
+                name="travelers"
+                min="1"
+                placeholder="Número de viajeros"
+            >
+
+        </div>
+
+
+        <div class="travel-form-field">
+
+            <label>
+                ¿Tienes las fechas cerradas?
+            </label>
+
+            <div class="travel-form-options">
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="dates-flexibility"
+                        value="cerradas"
+                    >
+
+                    <span>Sí, son cerradas</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="dates-flexibility"
+                        value="flexibles"
+                    >
+
+                    <span>No, son flexibles</span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="travel-form-navigation">
+
+            <button
+                type="button"
+                class="travel-form-back"
+                data-back="step-1"
+            >
+                Atrás
+            </button>
+
+
+            <button
+                type="button"
+                class="travel-form-next"
+                data-next="step-3"
+            >
+                Siguiente
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+<!-- ============================================================
+     FORMULARIO · SECCIÓN 3 · QUÉ BUSCAS
+     ============================================================ -->
+
+<section class="travel-form-section" id="step-3">
+
+    <div class="travel-form-header">
+
+        <p class="travel-form-eyebrow">
+            03 · QUÉ BUSCAS
+        </p>
+
+        <h2>
+            ¿Qué tienes en mente?
+        </h2>
+
+        <p class="travel-form-intro">
+            Cuéntame qué tipo de viaje te gustaría hacer y qué esperas
+            encontrar en él.
+        </p>
+
+    </div>
+
+
+    <form class="travel-form">
+
+        <div class="travel-form-field">
+
+            <label>
+                ¿Qué tipo de viaje buscas?
+            </label>
+
+            <div class="travel-form-options">
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="travel-type"
+                        value="descanso"
+                    >
+
+                    <span>Descanso</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="travel-type"
+                        value="aventura"
+                    >
+
+                    <span>Aventura</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="travel-type"
+                        value="cultura"
+                    >
+
+                    <span>Cultura</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="travel-type"
+                        value="naturaleza"
+                    >
+
+                    <span>Naturaleza</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="travel-type"
+                        value="gastronomia"
+                    >
+
+                    <span>Gastronomía</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="travel-type"
+                        value="mixto"
+                    >
+
+                    <span>Un poco de todo</span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="travel-form-field">
+
+            <label for="travel-priorities">
+                ¿Qué es lo más importante para ti en este viaje?
+            </label>
+
+            <textarea
+                id="travel-priorities"
+                name="travel-priorities"
+                rows="4"
+                placeholder="Por ejemplo: descansar, conocer muchos lugares, comer bien, tener tiempo libre..."
+            ></textarea>
+
+        </div>
+
+
+        <div class="travel-form-field">
+
+            <label for="travel-preferences">
+                ¿Hay algo que te gustaría incluir?
+            </label>
+
+            <textarea
+                id="travel-preferences"
+                name="travel-preferences"
+                rows="4"
+                placeholder="Actividades, lugares, experiencias, tipo de alojamiento..."
+            ></textarea>
+
+        </div>
+
+
+        <div class="travel-form-field">
+
+            <label for="travel-avoid">
+                ¿Hay algo que prefieras evitar?
+            </label>
+
+            <textarea
+                id="travel-avoid"
+                name="travel-avoid"
+                rows="3"
+                placeholder="Algo que no te guste, que no quieras hacer o que debamos tener en cuenta..."
+            ></textarea>
+
+        </div>
+
+
+        <div class="travel-form-navigation">
+
+            <button
+                type="button"
+                class="travel-form-back"
+                data-back="step-2"
+            >
+                Atrás
+            </button>
+
+
+            <button
+                type="button"
+                class="travel-form-next"
+                data-next="step-4"
+            >
+                Siguiente
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+<!-- ============================================================
+     FORMULARIO · SECCIÓN 4 · PRESUPUESTO
+     ============================================================ -->
+
+<section class="travel-form-section" id="step-4">
+
+    <div class="travel-form-header">
+
+        <p class="travel-form-eyebrow">
+            04 · PRESUPUESTO
+        </p>
+
+        <h2>
+            ¿Qué presupuesto tienes en mente?
+        </h2>
+
+        <p class="travel-form-intro">
+            No necesitas tener una cifra exacta. Una aproximación me ayudará
+            a buscar opciones que realmente encajen contigo.
+        </p>
+
+    </div>
+
+
+    <form class="travel-form">
+
+        <div class="travel-form-field">
+
+            <label for="travel-budget">
+                Presupuesto aproximado por persona
+            </label>
+
+            <input
+                type="number"
+                id="travel-budget"
+                name="travel-budget"
+                min="0"
+                placeholder="Por ejemplo: 1500"
+            >
+
+        </div>
+
+
+        <div class="travel-form-field">
+
+            <label>
+                ¿Qué incluye aproximadamente ese presupuesto?
+            </label>
+
+            <div class="travel-form-options">
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="checkbox"
+                        name="budget-includes"
+                        value="transporte"
+                    >
+
+                    <span>Transporte</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="checkbox"
+                        name="budget-includes"
+                        value="alojamiento"
+                    >
+
+                    <span>Alojamiento</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="checkbox"
+                        name="budget-includes"
+                        value="actividades"
+                    >
+
+                    <span>Actividades</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="checkbox"
+                        name="budget-includes"
+                        value="todo"
+                    >
+
+                    <span>Todo el viaje</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="checkbox"
+                        name="budget-includes"
+                        value="no-se"
+                    >
+
+                    <span>No lo tengo claro</span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="travel-form-field">
+
+            <label>
+                ¿Qué prefieres?
+            </label>
+
+            <div class="travel-form-options">
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="budget-priority"
+                        value="precio"
+                    >
+
+                    <span>Buscar el mejor precio</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="budget-priority"
+                        value="calidad"
+                    >
+
+                    <span>Priorizar calidad</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="budget-priority"
+                        value="equilibrio"
+                    >
+
+                    <span>Buscar un equilibrio</span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="travel-form-field">
+
+            <label for="travel-budget-flexibility">
+                ¿Tienes cierta flexibilidad con el presupuesto?
+            </label>
+
+            <textarea
+                id="travel-budget-flexibility"
+                name="travel-budget-flexibility"
+                rows="3"
+                placeholder="Por ejemplo: podría aumentar el presupuesto si la diferencia merece la pena..."
+            ></textarea>
+
+        </div>
+
+
+        <div class="travel-form-navigation">
+
+            <button
+                type="button"
+                class="travel-form-back"
+                data-back="step-3"
+            >
+                Atrás
+            </button>
+
+
+            <button
+                type="button"
+                class="travel-form-next"
+                data-next="step-5"
+            >
+                Siguiente
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+<!-- ============================================================
+     FORMULARIO · SECCIÓN 5 · INFORMACIÓN ADICIONAL
+     ============================================================ -->
+
+<section class="travel-form-section" id="step-5">
+
+    <div class="travel-form-header">
+
+        <p class="travel-form-eyebrow">
+            05 · UN ÚLTIMO DETALLE
+        </p>
+
+        <h2>
+            Cuéntame lo que quieras
+        </h2>
+
+        <p class="travel-form-intro">
+            Si hay algo más que quieras contarme sobre tu viaje,
+            este es el momento.
+        </p>
+
+    </div>
+
+
+    <form class="travel-form">
+
+        <div class="travel-form-field">
+
+            <label for="travel-additional-info">
+                ¿Hay algo más que deba saber?
+            </label>
+
+            <textarea
+                id="travel-additional-info"
+                name="travel-additional-info"
+                rows="6"
+                placeholder="Cuéntame cualquier detalle, idea, necesidad o duda que tengas..."
+            ></textarea>
+
+        </div>
+
+
+        <div class="travel-form-field">
+
+            <label>
+                ¿Cómo nos has encontrado?
+            </label>
+
+            <div class="travel-form-options">
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="how-found"
+                        value="instagram"
+                    >
+
+                    <span>Instagram</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="how-found"
+                        value="tiktok"
+                    >
+
+                    <span>TikTok</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="how-found"
+                        value="google"
+                    >
+
+                    <span>Google</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="how-found"
+                        value="recomendacion"
+                    >
+
+                    <span>Recomendación</span>
+
+                </label>
+
+
+                <label class="travel-form-option">
+
+                    <input
+                        type="radio"
+                        name="how-found"
+                        value="otro"
+                    >
+
+                    <span>Otro</span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+
+        <div class="travel-form-legal">
+
+            <label class="travel-form-option">
+
+                <input
+                    type="checkbox"
+                    id="privacy-consent"
+                    name="privacy-consent"
+                    required
+                >
+
+                <span>
+                    He leído y acepto la
+                    <a href="politica-privacidad.html" target="_blank">
+                        Política de privacidad
+                    </a>.
+                </span>
+
+            </label>
+
+        </div>
+
+
+        <div class="travel-form-navigation">
+
+            <button
+                type="button"
+                class="travel-form-back"
+                data-back="step-4"
+            >
+                Atrás
+            </button>
+
+
+            <button
+                type="submit"
+                class="travel-form-submit"
+            >
+                Enviar solicitud
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
 </main>
