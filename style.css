@@ -851,3 +851,327 @@ a:focus {
     }
 
 }
+
+/* ============================================================
+   FORMULARIO · PLANEA TU VIAJE
+   ============================================================ */
+
+.travel-form-page {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 140px 40px 100px;
+}
+
+.travel-form-section {
+    width: 100%;
+}
+
+.travel-form-section[hidden] {
+    display: none !important;
+}
+
+
+/* ============================================================
+   FORMULARIO · CABECERA
+   ============================================================ */
+
+.travel-form-header {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 55px;
+}
+
+.travel-form-eyebrow {
+    margin: 0 0 12px;
+    font-family: inherit;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #777777;
+}
+
+.travel-form-header h1,
+.travel-form-header h2 {
+    margin: 0;
+    font-family: inherit;
+    font-size: clamp(32px, 5vw, 50px);
+    font-weight: 500;
+    line-height: 1.1;
+    color: #181818;
+}
+
+.travel-form-intro {
+    max-width: 600px;
+    margin: 17px 0 0;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #666666;
+}
+
+
+/* ============================================================
+   FORMULARIO · ESTRUCTURA
+   ============================================================ */
+
+.travel-form {
+    width: 100%;
+    max-width: 760px;
+}
+
+.travel-form-field {
+    margin-bottom: 34px;
+}
+
+.travel-form-field > label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #777777;
+}
+
+.travel-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+
+/* ============================================================
+   FORMULARIO · INPUTS
+   ============================================================ */
+
+.travel-form input[type="text"],
+.travel-form input[type="email"],
+.travel-form input[type="tel"],
+.travel-form input[type="number"],
+.travel-form input[type="date"],
+.travel-form textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 0;
+    border: 0;
+    border-bottom: 1px solid #d9d9d6;
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #181818;
+    transition: border-color 0.2s ease;
+}
+
+.travel-form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.travel-form input::placeholder,
+.travel-form textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.travel-form input:focus,
+.travel-form textarea:focus {
+    border-bottom-color: #181818;
+}
+
+
+/* ============================================================
+   FORMULARIO · OPCIONES
+   ============================================================ */
+
+.travel-form-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.travel-form-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #555555;
+}
+
+.travel-form-option input {
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    accent-color: #181818;
+    cursor: pointer;
+}
+
+.travel-form-option span {
+    display: inline-block;
+}
+
+
+/* ============================================================
+   FORMULARIO · NAVEGACIÓN
+   ============================================================ */
+
+.travel-form-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 55px;
+}
+
+.travel-form-navigation button {
+    min-height: 42px;
+    padding: 0 24px;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.travel-form-back {
+    border: 1px solid #d9d9d6;
+    background: transparent;
+    color: #555555;
+}
+
+.travel-form-back:hover {
+    border-color: #181818;
+    color: #181818;
+}
+
+.travel-form-next,
+.travel-form-submit {
+    margin-left: auto;
+    border: 1px solid #181818;
+    background: #181818;
+    color: #ffffff;
+}
+
+.travel-form-next:hover,
+.travel-form-submit:hover {
+    background: #333333;
+    border-color: #333333;
+}
+
+.travel-form-navigation button:active {
+    transform: translateY(1px);
+}
+
+
+/* ============================================================
+   FORMULARIO · LEGAL
+   ============================================================ */
+
+.travel-form-legal {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #eeeeeb;
+}
+
+.travel-form-legal .travel-form-option {
+    align-items: flex-start;
+    font-size: 9px;
+    line-height: 1.6;
+    color: #777777;
+}
+
+.travel-form-legal a {
+    color: #555555;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.travel-form-legal a:hover {
+    color: #181818;
+}
+
+
+/* ============================================================
+   FORMULARIO · RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    .travel-form-page {
+        padding: 110px 24px 70px;
+    }
+
+    .travel-form-header {
+        margin-bottom: 42px;
+    }
+
+    .travel-form-header h1,
+    .travel-form-header h2 {
+        font-size: 34px;
+    }
+
+    .travel-form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .travel-form-field {
+        margin-bottom: 30px;
+    }
+
+    .travel-form-navigation {
+        margin-top: 45px;
+    }
+
+}
+
+
+/* ============================================================
+   FORMULARIO · MÓVIL PEQUEÑO
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+    .travel-form-page {
+        padding: 90px 20px 60px;
+    }
+
+    .travel-form-header h1,
+    .travel-form-header h2 {
+        font-size: 30px;
+    }
+
+    .travel-form-intro {
+        font-size: 10px;
+    }
+
+    .travel-form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .travel-form-navigation {
+        gap: 12px;
+    }
+
+    .travel-form-navigation button {
+        padding: 0 18px;
+    }
+
+}

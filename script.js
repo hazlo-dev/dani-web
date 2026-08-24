@@ -383,3 +383,93 @@ if ("serviceWorker" in navigator) {
     });
 
 }
+
+// ============================================================
+// FORMULARIO · PLANEA TU VIAJE · NAVEGACIÓN
+// ============================================================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const formSections = document.querySelectorAll(".travel-form-section");
+
+    if (!formSections.length) return;
+
+
+    // ========================================================
+    // MOSTRAR UNA SECCIÓN
+    // ========================================================
+
+    function showSection(sectionId) {
+
+        formSections.forEach(section => {
+            section.hidden = section.id !== sectionId;
+        });
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+
+    // ========================================================
+    // BOTONES · SIGUIENTE
+    // ========================================================
+
+    document.querySelectorAll(".travel-form-next").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const currentSection = button.closest(".travel-form-section");
+            const nextSectionId = button.dataset.next;
+            const nextSection = document.getElementById(nextSectionId);
+
+            if (!currentSection || !nextSection) return;
+
+
+            // Validar únicamente los campos obligatorios
+            const requiredFields = currentSection.querySelectorAll(
+                "input[required], textarea[required], select[required]"
+            );
+
+            let valid = true;
+
+            requiredFields.forEach(field => {
+
+                if (!field.checkValidity()) {
+                    valid = false;
+                    field.reportValidity();
+                }
+
+            });
+
+            if (!valid) return;
+
+
+            showSection(nextSectionId);
+
+        });
+
+    });
+
+
+    // ========================================================
+    // BOTONES · ATRÁS
+    // ========================================================
+
+    document.querySelectorAll(".travel-form-back").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const previousSectionId = button.dataset.back;
+
+            if (!previousSectionId) return;
+
+            showSection(previousSectionId);
+
+        });
+
+    });
+
+
+});
