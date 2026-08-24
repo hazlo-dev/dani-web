@@ -3,7 +3,7 @@
    ========================================= */
 
 const elements = document.querySelectorAll(
-    ".hidden:not(.benefits):not(.benefits .hidden):not(.process):not(.process .hidden):not(.footer):not(.button-hint)"
+    ".hidden:not(.benefits):not(.benefits .hidden):not(.process):not(.process .hidden):not(.footer):not(.button-hint):not(.travel-form-page):not(.travel-form-page .hidden)"
 );
 
 const delays = [
@@ -396,6 +396,73 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // ========================================================
+    // APARICIÓN DE LA PÁGINA DEL FORMULARIO
+    // ========================================================
+
+    const formPage = document.querySelector(".travel-form-page.hidden");
+
+    if (formPage) {
+        setTimeout(() => {
+            formPage.classList.add("show");
+        }, 0);
+    }
+
+
+    // ========================================================
+    // ANIMACIÓN DE ENTRADA DE UN PASO
+    // (mismo patrón .hidden / .show que el resto de la web,
+    // adaptado al contenido variable de cada paso)
+    // ========================================================
+
+    const animatedSteps = new Set();
+
+    function animateStepIn(section) {
+
+        if (!section) return;
+
+        const eyebrow = section.querySelector(".travel-form-eyebrow.hidden");
+        const heading = section.querySelector("h1.hidden, h2.hidden");
+        const intro = section.querySelector(".travel-form-intro.hidden");
+        const fields = section.querySelectorAll(
+            ".travel-form-field.hidden, .travel-form-legal.hidden"
+        );
+        const navigation = section.querySelector(".travel-form-navigation.hidden");
+
+        let delay = 0;
+
+        if (eyebrow) {
+            setTimeout(() => eyebrow.classList.add("show"), delay);
+        }
+
+        delay += 200;
+
+        if (heading) {
+            setTimeout(() => heading.classList.add("show"), delay);
+        }
+
+        delay += 250;
+
+        if (intro) {
+            setTimeout(() => intro.classList.add("show"), delay);
+        }
+
+        delay += 300;
+
+        fields.forEach((field, index) => {
+            setTimeout(() => {
+                field.classList.add("show");
+            }, delay + (index * 200));
+        });
+
+        delay += fields.length * 200;
+
+        if (navigation) {
+            setTimeout(() => navigation.classList.add("show"), delay + 150);
+        }
+    }
+
+
+    // ========================================================
     // MOSTRAR UNA SECCIÓN
     // ========================================================
 
@@ -405,10 +472,31 @@ document.addEventListener("DOMContentLoaded", () => {
             section.hidden = section.id !== sectionId;
         });
 
+        if (!animatedSteps.has(sectionId)) {
+
+            animateStepIn(document.getElementById(sectionId));
+            animatedSteps.add(sectionId);
+
+        }
+
         window.scrollTo({
             top: 0,
             behavior: "smooth"
         });
+    }
+
+
+    // ========================================================
+    // ANIMAR EL PRIMER PASO VISIBLE AL CARGAR
+    // ========================================================
+
+    const initialSection = document.querySelector(
+        ".travel-form-section:not([hidden])"
+    );
+
+    if (initialSection) {
+        animateStepIn(initialSection);
+        animatedSteps.add(initialSection.id);
     }
 
 

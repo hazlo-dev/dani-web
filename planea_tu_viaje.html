@@ -1,22 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- =========================================
+         CONFIGURACIÓN Y METADATOS
+         ========================================= -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Planea tu viaje | Dani Ruiz</title>
+
+    <meta name="description" content="Cuéntame cómo quieres que sea tu viaje: destino, fechas, presupuesto y preferencias. En pocos pasos tendré todo lo que necesito para empezar a organizarlo.">
+    <meta name="keywords" content="asesor de viajes, planea tu viaje, viajes personalizados, Dani Ruiz">
+    <meta name="author" content="Dani Ruiz">
+    <meta http-equiv="content-language" content="es">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#111111">
+
+    <meta property="og:title" content="Planea tu viaje | Dani Ruiz">
+    <meta property="og:description" content="Cuéntame cómo quieres que sea tu viaje y empecemos a organizarlo juntos.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hazlo-dev.github.io/dani-web/planea_tu_viaje.html">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Planea tu viaje | Dani Ruiz">
+    <meta name="twitter:description" content="Cuéntame cómo quieres que sea tu viaje y empecemos a organizarlo juntos.">
+
+    <link rel="canonical" href="https://hazlo-dev.github.io/dani-web/planea_tu_viaje.html">
+    <link rel="icon" href="icons/icon-192.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- =========================================
+         FUENTES E ICONOS
+         ========================================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+
 <!-- ============================================================
      FORMULARIO · SECCIÓN 1 · DATOS DEL CLIENTE
      ============================================================ -->
 
-<main class="travel-form-page">
+<main class="travel-form-page hidden">
 
     <section class="travel-form-section active" id="step-1">
 
         <div class="travel-form-header">
 
-            <p class="travel-form-eyebrow">
+            <p class="travel-form-eyebrow hidden">
                 01 · TUS DATOS
             </p>
 
-            <h1>
+            <h1 class="hidden">
                 Empecemos por ti
             </h1>
 
-            <p class="travel-form-intro">
+            <p class="travel-form-intro hidden">
                 Déjame algunos datos para poder ponerme en contacto contigo
                 y conocer mejor tu idea de viaje.
             </p>
@@ -26,7 +78,7 @@
 
         <form class="travel-form">
 
-            <div class="travel-form-field">
+            <div class="travel-form-field hidden">
 
                 <label for="client-name">
                     Nombre y apellidos
@@ -44,7 +96,7 @@
             </div>
 
 
-            <div class="travel-form-field">
+            <div class="travel-form-field hidden">
 
                 <label for="client-email">
                     Email
@@ -62,7 +114,7 @@
             </div>
 
 
-            <div class="travel-form-field">
+            <div class="travel-form-field hidden">
 
                 <label for="client-phone">
                     Teléfono
@@ -80,7 +132,7 @@
             </div>
 
 
-            <div class="travel-form-field">
+            <div class="travel-form-field hidden">
 
                 <label>
                     ¿Cómo prefieres que te contacte?
@@ -132,7 +184,7 @@
             </div>
 
 
-            <div class="travel-form-navigation">
+            <div class="travel-form-navigation hidden">
 
                 <button
                     type="button"
@@ -156,15 +208,15 @@
 
     <div class="travel-form-header">
 
-        <p class="travel-form-eyebrow">
+        <p class="travel-form-eyebrow hidden">
             02 · TU VIAJE
         </p>
 
-        <h2>
+        <h2 class="hidden">
             Cuéntame tu idea
         </h2>
 
-        <p class="travel-form-intro">
+        <p class="travel-form-intro hidden">
             No hace falta que tengas todo decidido. Cuanto más me cuentes,
             mejor podré entender qué estás buscando.
         </p>
@@ -174,7 +226,7 @@
 
     <form class="travel-form">
 
-        <div class="travel-form-field">
+        <div class="travel-form-field hidden">
 
             <label for="travel-destination">
                 ¿A dónde te gustaría viajar?
@@ -192,7 +244,7 @@
 
         <div class="travel-form-row">
 
-            <div class="travel-form-field">
+            <div class="travel-form-field hidden">
 
                 <label for="travel-start-date">
                     Fecha aproximada de salida
@@ -207,7 +259,7 @@
             </div>
 
 
-            <div class="travel-form-field">
+            <div class="travel-form-field hidden">
 
                 <label for="travel-end-date">
                     Fecha aproximada de regreso
@@ -224,7 +276,7 @@
         </div>
 
 
-        <div class="travel-form-field">
+        <div class="travel-form-field hidden">
 
             <label for="travelers">
                 ¿Cuántas personas viajaríais?
@@ -241,7 +293,7 @@
         </div>
 
 
-        <div class="travel-form-field">
+        <div class="travel-form-field hidden">
 
             <label>
                 ¿Tienes las fechas cerradas?
@@ -279,7 +331,7 @@
         </div>
 
 
-        <div class="travel-form-navigation">
+        <div class="travel-form-navigation hidden">
 
             <button
                 type="button"
@@ -312,15 +364,15 @@
 
     <div class="travel-form-header">
 
-        <p class="travel-form-eyebrow">
+        <p class="travel-form-eyebrow hidden">
             03 · QUÉ BUSCAS
         </p>
 
-        <h2>
+        <h2 class="hidden">
             ¿Qué tienes en mente?
         </h2>
 
-        <p class="travel-form-intro">
+        <p class="travel-form-intro hidden">
             Cuéntame qué tipo de viaje te gustaría hacer y qué esperas
             encontrar en él.
         </p>
@@ -330,7 +382,7 @@
 
     <form class="travel-form">
 
-        <div class="travel-form-field">
+        <div class="travel-form-field hidden">
 
             <label>
                 ¿Qué tipo de viaje buscas?
@@ -420,7 +472,7 @@
         </div>
 
 
-        <div class="travel-form-field">
+        <div class="travel-form-field hidden">
 
             <label for="travel-priorities">
                 ¿Qué es lo más importante para ti en este viaje?
@@ -436,7 +488,7 @@
         </div>
 
 
-        <div class="travel-form-field">
+        <div class="travel-form-field hidden">
 
             <label for="travel-preferences">
                 ¿Hay algo que te gustaría incluir?
@@ -452,7 +504,7 @@
         </div>
 
 
-        <div class="travel-form-field">
+        <div class="travel-form-field hidden">
 
             <label for="travel-avoid">
                 ¿Hay algo que prefieras evitar?
@@ -468,7 +520,7 @@
         </div>
 
 
-        <div class="travel-form-navigation">
+        <div class="travel-form-navigation hidden">
 
             <button
                 type="button"
@@ -501,15 +553,15 @@
 
     <div class="travel-form-header">
 
-        <p class="travel-form-eyebrow">
+        <p class="travel-form-eyebrow hidden">
             04 · PRESUPUESTO
         </p>
 
-        <h2>
+        <h2 class="hidden">
             ¿Qué presupuesto tienes en mente?
         </h2>
 
-        <p class="travel-form-intro">
+        <p class="travel-form-intro hidden">
             No necesitas tener una cifra exacta. Una aproximación me ayudará
             a buscar opciones que realmente encajen contigo.
         </p>
@@ -519,7 +571,7 @@
 
     <form class="travel-form">
 
-        <div class="travel-form-field">
+        <div class="travel-form-field hidden">
 
             <label for="travel-budget">
                 Presupuesto aproximado por persona
@@ -536,7 +588,7 @@
         </div>
 
 
-        <div class="travel-form-field">
+        <div class="travel-form-field hidden">
 
             <label>
                 ¿Qué incluye aproximadamente ese presupuesto?
@@ -613,7 +665,7 @@
         </div>
 
 
-        <div class="travel-form-field">
+        <div class="travel-form-field hidden">
 
             <label>
                 ¿Qué prefieres?
@@ -664,7 +716,7 @@
         </div>
 
 
-        <div class="travel-form-field">
+        <div class="travel-form-field hidden">
 
             <label for="travel-budget-flexibility">
                 ¿Tienes cierta flexibilidad con el presupuesto?
@@ -680,7 +732,7 @@
         </div>
 
 
-        <div class="travel-form-navigation">
+        <div class="travel-form-navigation hidden">
 
             <button
                 type="button"
@@ -713,15 +765,15 @@
     
     <div class="travel-form-header">
 
-        <p class="travel-form-eyebrow">
+        <p class="travel-form-eyebrow hidden">
             05 · UN ÚLTIMO DETALLE
         </p>
 
-        <h2>
+        <h2 class="hidden">
             Cuéntame lo que quieras
         </h2>
 
-        <p class="travel-form-intro">
+        <p class="travel-form-intro hidden">
             Si hay algo más que quieras contarme sobre tu viaje,
             este es el momento.
         </p>
@@ -731,7 +783,7 @@
 
     <form class="travel-form">
 
-        <div class="travel-form-field">
+        <div class="travel-form-field hidden">
 
             <label for="travel-additional-info">
                 ¿Hay algo más que deba saber?
@@ -747,7 +799,7 @@
         </div>
 
 
-        <div class="travel-form-field">
+        <div class="travel-form-field hidden">
 
             <label>
                 ¿Cómo nos has encontrado?
@@ -824,7 +876,7 @@
         </div>
 
 
-        <div class="travel-form-legal">
+        <div class="travel-form-legal hidden">
 
             <label class="travel-form-option">
 
@@ -847,7 +899,7 @@
         </div>
 
 
-        <div class="travel-form-navigation">
+        <div class="travel-form-navigation hidden">
 
             <button
                 type="button"
@@ -872,3 +924,8 @@
 </section>
 
 </main>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
