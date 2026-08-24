@@ -487,6 +487,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // ========================================================
+    // GRUPO DE CHECKBOX "QUÉ INCLUYE EL PRESUPUESTO"
+    // (HTML no permite un "required" nativo a nivel de grupo
+    // para checkboxes, así que se alterna el required de forma
+    // dinámica: obligatorio mientras no haya ninguno marcado)
+    // ========================================================
+
+    const budgetIncludesCheckboxes = document.querySelectorAll(
+        'input[type="checkbox"][name="budget-includes"]'
+    );
+
+    function syncBudgetIncludesRequired() {
+
+        const anyChecked = Array.from(budgetIncludesCheckboxes).some(
+            checkbox => checkbox.checked
+        );
+
+        budgetIncludesCheckboxes.forEach(checkbox => {
+            checkbox.required = !anyChecked;
+        });
+    }
+
+    if (budgetIncludesCheckboxes.length) {
+
+        syncBudgetIncludesRequired();
+
+        budgetIncludesCheckboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", syncBudgetIncludesRequired);
+        });
+
+    }
+
+
+    // ========================================================
     // ANIMAR EL PRIMER PASO VISIBLE AL CARGAR
     // ========================================================
 
@@ -558,118 +591,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     });
-
-
-    // ========================================================
-    // ENVÍO FINAL DEL FORMULARIO · FORMSPREE
-    // ========================================================
-
-    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xoeaoaal";
-
-    const lastSection = document.getElementById("step-5");
-    const submitForm = lastSection?.querySelector("form.travel-form");
-    const submitButton = submitForm?.querySelector(".travel-form-submit");
-    const errorMessage = document.getElementById("form-error-message");
-
-    if (submitForm) {
-
-        submitForm.addEventListener("submit", (event) => {
-
-            event.preventDefault();
-
-            if (errorMessage) {
-                errorMessage.hidden = true;
-            }
-
-            // Validar únicamente los campos obligatorios de este paso
-            const requiredFields = submitForm.querySelectorAll(
-                "input[required], textarea[required], select[required]"
-            );
-
-            let valid = true;
-
-            requiredFields.forEach(field => {
-
-                if (!field.checkValidity()) {
-                    valid = false;
-                    field.reportValidity();
-                }
-
-            });
-
-            if (!valid) return;
-
-
-            // Recoger los datos de los 5 pasos del formulario
-            // (cada paso tiene su propio <form>)
-            const allForms = document.querySelectorAll(
-                ".travel-form-section form.travel-form"
-            );
-
-            const payload = new FormData();
-
-            allForms.forEach(form => {
-
-                const formData = new FormData(form);
-
-                for (const [key, value] of formData.entries()) {
-                    payload.append(key, value);
-                }
-
-            });
-
-            // Asunto y respuesta directa al email del cliente
-            payload.append("_subject", "Nueva solicitud de viaje");
-
-            const clientEmail = document.getElementById("client-email")?.value;
-
-            if (clientEmail) {
-                payload.append("_replyto", clientEmail);
-            }
-
-
-            if (submitButton) {
-                submitButton.disabled = true;
-                submitButton.textContent = "Enviando...";
-            }
-
-            fetch(FORMSPREE_ENDPOINT, {
-                method: "POST",
-                body: payload,
-                headers: {
-                    "Accept": "application/json"
-                }
-            })
-                .then(response => {
-
-                    if (!response.ok) {
-                        throw new Error("Formspree respondió con un error");
-                    }
-
-                    showSection("step-success");
-
-                })
-                .catch(error => {
-
-                    console.error("Error al enviar el formulario:", error);
-
-                    if (errorMessage) {
-                        errorMessage.hidden = false;
-                    }
-
-                })
-                .finally(() => {
-
-                    if (submitButton) {
-                        submitButton.disabled = false;
-                        submitButton.textContent = "Enviar solicitud";
-                    }
-
-                });
-
-        });
-
-    }
 
 
 });
