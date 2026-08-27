@@ -1,14 +1,16 @@
-const CACHE_NAME = "dani-web-v2";
+const CACHE_NAME = "dani-web-v4";
 
 const FILES_TO_CACHE = [
     "./",
     "./index.html",
+    "./planea_tu_viaje.html",
     "./politica-privacidad.html",
+    "./terminos-condiciones.html",
     "./style.css",
     "./script.js",
     "./manifest.json",
-    "./icon-192.png",
-    "./icon-512.png"
+    "./icons/icon-192.png",
+    "./icons/icon-512.png"
 ];
 
 self.addEventListener("install", event => {
