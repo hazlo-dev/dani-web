@@ -358,29 +358,37 @@ if (tranquility && processSection) {
 
 if ("serviceWorker" in navigator) {
 
-    window.addEventListener("load", () => {
+    const isLocalDev =
+        location.hostname === "localhost" ||
+        location.hostname === "127.0.0.1";
 
-        navigator.serviceWorker
-            .register("./serviceworker.js")
+    if (!isLocalDev) {
 
-            .then(() => {
+        window.addEventListener("load", () => {
 
-                console.log(
-                    "Service Worker registrado correctamente"
-                );
+            navigator.serviceWorker
+                .register("./serviceworker.js")
 
-            })
+                .then(() => {
 
-            .catch((error) => {
+                    console.log(
+                        "Service Worker registrado correctamente"
+                    );
 
-                console.error(
-                    "Error registrando el Service Worker:",
-                    error
-                );
+                })
 
-            });
+                .catch((error) => {
 
-    });
+                    console.error(
+                        "Error registrando el Service Worker:",
+                        error
+                    );
+
+                });
+
+        });
+
+    }
 
 }
 
