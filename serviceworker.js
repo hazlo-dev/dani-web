@@ -1,4 +1,4 @@
-const CACHE_NAME = "dani-web-v8";
+const CACHE_NAME = "dani-web-v4";
 
 const FILES_TO_CACHE = [
     "./",
