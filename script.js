@@ -18,9 +18,7 @@ const delays = [
     1700    // Planifica tu viaje
 ];
 
-elements.forEach((element, index) => {
-
-    const buttonHints = document.querySelectorAll(".button-hint.hidden");
+const buttonHints = document.querySelectorAll(".button-hint.hidden");
 
 buttonHints.forEach((hint, index) => {
 
@@ -29,6 +27,8 @@ buttonHints.forEach((hint, index) => {
     }, 1100 + (index * 300));
 
 });
+
+elements.forEach((element, index) => {
 
     if (
         element.classList.contains("process-step") ||
